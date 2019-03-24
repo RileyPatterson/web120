@@ -1,0 +1,209 @@
+
+/* Start GLOBAL RULES */
+
+html {
+    background-color: darkgray; 
+}
+
+div.wrapper {
+   background-color:azure;
+   color:black; 
+   width:90%;
+   margin:auto; /* If this is smaller than its parent HTML, then center it in its parent object */
+/* overflow:auto; */
+}
+
+.hero-image {
+    height: 27em;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+}
+
+.banner {
+    width: 100%;
+    opacity:0.85;
+    margin: 0;
+    text-align:center;
+    background-color:black;
+    position: fixed;
+    top: auto;
+    z-index: 1;
+    left: 0px;
+    top: 0px; 
+}
+
+.pageID {
+    text-align: center;
+    color: darkgreen;
+    font-weight: 800; 
+}
+
+p {
+    margin-left:1.5em;
+    padding-right: 1.5em;
+    text-align: justify;
+}
+
+img.vertical-responsive {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: auto;
+    float: left; 
+    width: 55%;
+    max-height: 623px; 
+    max-width: 466px;
+}
+
+img.horizontal-responsive {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width:100%;
+    max-width: 665px;
+    max-height: 466px;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    clear:both; /* responsive to both columns */
+}
+
+/* Gallery Page Rules */
+
+div.gallery:hover {
+    border: 0px solid #777;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+
+div.gallery img {
+    width: 100%;
+    height:auto; 
+}
+
+.responsive {
+    position: relative ;
+    text-align: center;
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+div.gallery {
+  opacity: 1;
+  display: block;
+  height:auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 0px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+}
+
+.caption {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
+}
+
+.desc {
+  position: relative;
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+} 
+
+.responsive:hover .gallery {
+  opacity: 0.65;
+}
+
+.responsive:hover .desc {
+  opacity: 1;
+}
+
+.responsive:hover .caption {
+  opacity: 1;
+}
+
+
+* {
+    box-sizing: border-box;
+} 
+
+/* Gallery Page Rules End*/
+
+/* Inspiration Page Rules Begin*/
+
+.mySlides {display:none;}
+.demo {cursor:pointer;
+    padding-bottom: 16px}
+
+/* End GLOBAL RULES */
+
+
+/* Start RESPONSIVE RULES */
+
+@media all and (min-width:700px) {
+
+/* Left Column */ 
+    section.resources {
+        float:left;
+        width:64%;
+    }
+     
+/* Right Column */ 
+    section.sources {
+        float:right;
+        width:34%;
+        padding-left: 0;
+    }    
+}
+
+@media all and (min-width:600px) {
+
+    section {
+        margin: auto;
+        width:80%;
+        }
+    }
+
+@media all and (max-width:599px) {
+
+    div.wrapper {  
+    width:100%;
+        }   
+    }
+
+@media only screen and (max-width: 1200px) {
+    .responsive {
+        width: 33.333333%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+/* End RESPONSIVE RULES */
